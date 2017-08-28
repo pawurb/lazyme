@@ -1,6 +1,6 @@
 # Lazyme  [![Gem Version](https://badge.fury.io/rb/lazyme.svg)](http://badge.fury.io/rb/lazyme)
 
-Lazyme a simple gem that helps you optimise your laziness. You can display your most used shell commands so that you can change them into aliases and eventually type less.
+Lazyme a simple gem that helps you optimise your laziness. It displays your most used shell commands so that you can change them into aliases and eventually type less.
 
 ## Installation
 ```bash
@@ -32,10 +32,10 @@ lazyme =>
  "g"=>1759
 ```
 
-You can set aliases by adding following lines into your `./bashrc` or `.zshrc` files:
+You can set aliases by adding following lines into your `.bashrc` or `.zshrc` files:
 
 ```
 alias gr='grep --color'
-alias gaa='git add . -A' #Git Add All
+alias gaa='git add . -A'
 ```
 
