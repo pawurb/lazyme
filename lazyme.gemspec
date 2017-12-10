@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{ Lazyme a simple gem that helps you optimise your laziness }
   gem.description   = %q{ Display your most used shell commands count }
   gem.homepage      = "http://github.com/pawurb/lazyme"
+  gem.add_dependency "terminal-table"
   gem.files         = `git ls-files`.split("\n")
   gem.executables   = ['lazyme']
   gem.require_paths = ["lib"]

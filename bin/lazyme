@@ -5,4 +5,4 @@ $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../lib') unless $LOAD_PATH.include
 
 require 'lazyme'
 
-Lazyme::Main.new.call
+Lazyme::Main.call
