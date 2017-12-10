@@ -12,27 +12,33 @@ module Lazyme
     end
 
     def call
-      file = File.open(history_file_path)
-      data = file.read.force_encoding('BINARY').
+      count = Hash.new(0)
 
+      File.read(history_file_path).force_encoding('BINARY').
       encode("UTF-8", invalid: :replace, undef: :replace).
       split("\n").map do |line|
         line.split(';').last
-      end
-
-      count = Hash.new(0)
-
-      data.each do |item|
+      end.each do |item|
         if trimmed = trim(item)
           count[trimmed] = count[trimmed] + 1
         end
       end
 
       rows = count.sort_by {|_, v| v }.select { |el| el[1] > COUNT_LIMIT }
-      puts Terminal::Table.new rows: rows
+
+      puts build_table(rows)
     end
 
     private
+
+    def build_table(rows)
+      Terminal::Table.new do |table|
+        headings = ['Command', 'Count']
+        table.title = "Lazyme"
+        table.rows = rows << :separator << headings
+        table.headings = headings
+      end
+    end
 
     def trim(item)
       if item && item.length == SIZE_LIMIT
