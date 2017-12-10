@@ -10,34 +10,27 @@ gem install lazyme
 ## Usage
 ```
 lazyme =>
-
++---------------------------------------------+------+
 ...
-+-----------------------------------------+----+
-| o .                                     | 3  |
-| rvm                                     | 3  |
-| z ios                                   | 3  |
-| sudo vi /etc/hosts                      | 3  |
-| vi .git/config                          | 3  |
-| vi .                                    | 3  |
-| gpl                                     | 4  |
-| ping wp.pl                              | 4  |
-| z price                                 | 4  |
-| c                                       | 4  |
-| gpshh                                   | 5  |
-| rss                                     | 5  |
-| df                                      | 5  |
-| ..                                      | 5  |
-| vi README.md                            | 7  |
-| bu                                      | 7  |
-| re                                      | 7  |
-| cd                                      | 7  |
-| gds                                     | 8  |
-| ls                                      | 9  |
-| s .                                     | 11 |
-| gp                                      | 12 |
-| gaa                                     | 14 |
-| g                                       | 43 |
-+-----------------------------------------+----+
+| ei                                          | 21   |
+| gpstg                                       | 22   |
+| gstp                                        | 23   |
+| zs                                          | 28   |
+| s .                                         | 30   |
+| zrr                                         | 32   |
+| gpshh                                       | 60   |
+| rss                                         | 70   |
+| c                                           | 75   |
+| gd                                          | 107  |
+| o .                                         | 123  |
+| gst                                         | 130  |
+| ls                                          | 179  |
+| gl                                          | 310  |
+| gp                                          | 445  |
+| gds                                         | 540  |
+| gaa                                         | 817  |
+| g                                           | 3365 |
++---------------------------------------------+------+
 ```
 
 You can set aliases by adding following lines into your `.bashrc` or `.zshrc` files:
