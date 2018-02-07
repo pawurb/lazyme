@@ -1,6 +1,6 @@
 # Lazyme  [![Gem Version](https://badge.fury.io/rb/lazyme.svg)](http://badge.fury.io/rb/lazyme)
 
-Lazyme is a simple gem that helps you optimise your laziness. It displays your most often used shell commands so that you can change them into aliases and eventually type less.
+Lazyme is a simple gem that helps you optimize your laziness. It displays your most often used shell commands so that you can change them into aliases and eventually type less.
 
 ## Installation
 ```bash
