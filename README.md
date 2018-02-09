@@ -40,7 +40,12 @@ lazyme =>
 You can set aliases by adding following lines into your `.bashrc` or `.zshrc` files:
 
 ```
-alias gr='grep --color'
+alias gr='grep — color'
+alias g='git status'
 alias gaa='git add . -A'
+
+function gm() {
+  git commit -m "$*"
+}
 ```
 
