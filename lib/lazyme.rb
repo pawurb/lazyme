@@ -51,10 +51,9 @@ module Lazyme
     end
 
     def history_file_path
-      if File.exist?(File.expand_path('~/.zsh_history'))
-        File.expand_path('~/.zsh_history')
-      elsif File.exist?(File.expand_path('~/.bash_history'))
-        File.expand_path('~/.bash_history')
+      p ENV
+      if history_file = ENV["HISTFILE"]
+        return history_file
       else
         raise "Missing both zsh and bash history files"
       end
