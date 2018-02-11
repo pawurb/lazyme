@@ -13,8 +13,9 @@ module Lazyme
 
     def call
       count = Hash.new(0)
+      return unless path = history_file_path
 
-      File.read(history_file_path).force_encoding('BINARY').
+      File.read(path).force_encoding('BINARY').
       encode("UTF-8", invalid: :replace, undef: :replace).
       split("\n").map do |line|
         line.split(';').last
@@ -51,12 +52,17 @@ module Lazyme
     end
 
     def history_file_path
+      if path = ARGV[0]
+        return path
+      end
+
       if File.exist?(File.expand_path('~/.zsh_history'))
         File.expand_path('~/.zsh_history')
       elsif File.exist?(File.expand_path('~/.bash_history'))
         File.expand_path('~/.bash_history')
       else
-        raise "Missing both zsh and bash history files"
+        puts "I cannot find your history file. \n You can provide file path as an argument: \n\n lazyme ~/files/history \n\n"
+        false
       end
     end
   end

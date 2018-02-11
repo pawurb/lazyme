@@ -49,3 +49,9 @@ function gm() {
 }
 ```
 
+If your history file is in a nonstandard location you need to provide its path when running the `lazyme` command:
+
+```
+lazyme ~/files/history
+```
+
