@@ -55,3 +55,16 @@ If your history file is in a non-standard location you need to provide its path 
 lazyme ~/files/history
 ```
 
+You can use this gem also to check the usage of your Ruby IRB commands. You need to persist history first. Add to your `~/.irbrc` file:
+
+```
+require 'irb/ext/save-history'
+IRB.conf[:SAVE_HISTORY] = 10000
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
+```
+
+Than just:
+
+```
+lazyme ~/.irb-history
+```
